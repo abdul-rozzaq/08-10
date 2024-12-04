@@ -41,3 +41,8 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return User.objects.create_user(username=validated_data["username"], password=validated_data["password"])
+
+
+class EmailMessageSerializer(serializers.Serializer):
+    title = serializers.CharField(max_length=256)
+    message = serializers.CharField()
