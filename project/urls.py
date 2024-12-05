@@ -3,6 +3,8 @@ from rest_framework.routers import DefaultRouter
 
 from .views import CommentViewSet, FoodTypeViewSet, FoodViewSet, RegisterAPIView, send_email
 
+app_name = 'project'
+
 router = DefaultRouter()
 router.register("food", FoodViewSet)
 router.register("food-type", FoodTypeViewSet)
